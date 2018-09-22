@@ -7,12 +7,12 @@ void main() {
   group('PascalsTriangle', () {
     group('Given a count, return a collection of that many rows of pascal\'s triangle', () {
       test("zero rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(0);
+        final List<List<int>> result = pascalsTriangle.rows(0);
         expect(result, equals(<Object>[]));
       }, skip: false);
 
       test("single row", () {
-        final List<List<num>> result = pascalsTriangle.rows(1);
+        final List<List<int>> result = pascalsTriangle.rows(1);
         expect(
             result,
             equals([
@@ -21,7 +21,7 @@ void main() {
       }, skip: true);
 
       test("two rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(2);
+        final List<List<int>> result = pascalsTriangle.rows(2);
         expect(
             result,
             equals([
@@ -31,7 +31,7 @@ void main() {
       }, skip: true);
 
       test("three rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(3);
+        final List<List<int>> result = pascalsTriangle.rows(3);
         expect(
             result,
             equals([
@@ -42,7 +42,7 @@ void main() {
       }, skip: true);
 
       test("four rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(4);
+        final List<List<int>> result = pascalsTriangle.rows(4);
         expect(
             result,
             equals([
@@ -54,7 +54,7 @@ void main() {
       }, skip: true);
 
       test("five rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(5);
+        final List<List<int>> result = pascalsTriangle.rows(5);
         expect(
             result,
             equals([
@@ -67,7 +67,7 @@ void main() {
       }, skip: true);
 
       test("six rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(6);
+        final List<List<int>> result = pascalsTriangle.rows(6);
         expect(
             result,
             equals([
@@ -81,7 +81,7 @@ void main() {
       }, skip: true);
 
       test("ten rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(10);
+        final List<List<int>> result = pascalsTriangle.rows(10);
         expect(
             result,
             equals([
@@ -99,8 +99,8 @@ void main() {
       }, skip: true);
 
       test("negative rows", () {
-        final List<List<num>> result = pascalsTriangle.rows(-1);
-        expect(result, equals(<List<num>>[]));
+        final List<List<int>> result = pascalsTriangle.rows(-1);
+        expect(result, equals(<List<int>>[]));
       }, skip: true);
     });
   });

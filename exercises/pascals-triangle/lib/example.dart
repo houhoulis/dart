@@ -1,16 +1,16 @@
 class PascalsTriangle {
-  List<List<num>> rows(int rows) {
+  List<List<int>> rows(int rows) {
     if (rows <= 0) {
       return [];
     } else {
-      List<List<num>> triangle = new List<List<num>>();
+      List<List<int>> triangle = new List<List<int>>();
 
       for (int x = 1; x <= rows; x++) {
-        List<num> nextRow = new List<num>(x)
+        List<int> nextRow = new List<int>(x)
           ..[0] = 1
           ..[x - 1] = 1;
         if (triangle.length > 1) {
-          List<num> previousRow = triangle.elementAt(triangle.length - 1);
+          List<int> previousRow = triangle.elementAt(triangle.length - 1);
           for (int i = 1; i < previousRow.length; i++) {
             nextRow[i] = previousRow[i - 1] + previousRow[i];
           }
